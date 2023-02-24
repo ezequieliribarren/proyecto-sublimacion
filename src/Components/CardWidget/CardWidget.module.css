@@ -1,0 +1,7 @@
+.carrito {
+  margin: 2rem;
+}
+
+.carrito:hover {
+  color: rgb(103, 26, 114);
+}

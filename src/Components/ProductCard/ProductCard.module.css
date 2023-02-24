@@ -1,0 +1,21 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.divImgProduct {
+  width: 15rem;
+}
+
+.divImgProduct img:hover {
+  transform: scale(1.1);
+}
+
+.divImgProduct img {
+  margin-top: 2rem;
+  width: 100%;
+}
