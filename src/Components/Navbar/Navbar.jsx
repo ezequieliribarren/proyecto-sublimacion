@@ -56,16 +56,23 @@ return (
           sx={{
             display: { xs: "block", md: "none" },
           }}
-        >
+        > 
+        
+        <Link to="/" className={styles.buttons}>
             <MenuItem>
-              <Typography textAlign="center">Todos</Typography>
+              <Typography textAlign="center">CATALOGO</Typography>
             </MenuItem>
+            </Link>
+            <Link to="/category/polimero" className={styles.buttons}>
             <MenuItem>
-              <Typography textAlign="center">Polimero</Typography>
+              <Typography textAlign="center">POLIMERO</Typography>
             </MenuItem>
+            </Link>
+            <Link to="category/insumos" className={styles.buttons}>
             <MenuItem>
-              <Typography textAlign="center">Insumos</Typography>
+              <Typography textAlign="center">INSUMOS</Typography>
             </MenuItem>
+            </Link>
         </Menu>
       </Box>
       <Link to="/">
@@ -89,7 +96,7 @@ return (
               textDecoration:"none"
             }}
           >
-          TODOS</Button>
+          CATALOGO</Button>
           </Link>
           <Link to="/category/polimero" className={styles.buttons}><Button
             onClick={handleCloseNavMenu}

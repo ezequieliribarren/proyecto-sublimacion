@@ -11,8 +11,8 @@ import x from "./ItemDetail.module.css"
 
 const ItemDetail = () => {
 
-    const {itemId} = useParams()
-const productSelected= products.find ((element)=> element.id===Number(itemId))
+    const {id} = useParams()
+const productSelected= products.find ((element)=> element.id===Number(id))
 
 const onAdd =(cantidad)=>{
     console.log(`Se agregó al carrito ${cantidad} productos`)

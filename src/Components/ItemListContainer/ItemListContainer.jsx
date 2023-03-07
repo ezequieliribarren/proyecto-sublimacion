@@ -7,13 +7,13 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
-const{categoryName} = useParams()
+const{id} = useParams()
 
-const productFilter = products.filter ((element) => element.category === categoryName)
+const productFilter = products.filter ((element) => element.category === id)
 
   useEffect(() => {
     const productList = new Promise((resolve, reject) => {
-      resolve(categoryName? productFilter: products);
+      resolve(id? productFilter: products);
     });
     productList
       .then((res) => {
@@ -22,7 +22,7 @@ const productFilter = products.filter ((element) => element.category === categor
       .catch((err) => {
         console.log(err);
       });
-  }, [categoryName]);
+  }, [id]);
   return (
     <div>
       <ItemList items={items} />

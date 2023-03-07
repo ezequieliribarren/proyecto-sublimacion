@@ -24,7 +24,7 @@ const Item = ({ element }) => {
         </Typography>
       </CardContent>
       <CardActions className={x.cardActions}>
-        <Link className={x.link} to={`/itemDetail/${element.id}`}>
+        <Link className={x.link} to={`/item/${element.id}`}>
         <Button size="small" variant="contained" color="primary">
           Ver detalle
         </Button>
