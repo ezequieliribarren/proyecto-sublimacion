@@ -1,0 +1,29 @@
+.card{
+    background-color:  rgb(216, 212, 212);
+    text-align: center;
+}
+
+.stock,.price{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 3px 15px #585373;
+    width: 14rem;
+    margin-top: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.contenedorCard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,26 @@
+.card{
+    background-color:  rgb(216, 212, 212)!important;
+    width: 25rem;
+    text-align: center;
+    box-shadow: 0 3px 15px #585373 !important;
+    height: 36rem;
+}
+
+.cardActions{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.cardMedia:hover{
+    transform: scale(1.1);
+}
+
+.cardContent{
+height: 10rem;
+}
+
+.link{
+    text-decoration: none;
+}

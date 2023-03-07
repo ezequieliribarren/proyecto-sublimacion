@@ -1,17 +1,31 @@
-import styles from "./ItemListContainer.module.css";
+import React from "react";
+import { products } from "../../productsMock";
+import { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ bienvenida }) => {
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+
+const{categoryName} = useParams()
+
+const productFilter = products.filter ((element) => element.category === categoryName)
+
+  useEffect(() => {
+    const productList = new Promise((resolve, reject) => {
+      resolve(categoryName? productFilter: products);
+    });
+    productList
+      .then((res) => {
+        setItems(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [categoryName]);
   return (
-    <div className={styles.contenedor}>
-      <div className={styles.greeting}>
-        <h2>{bienvenida}</h2>
-      </div>
-      <div>
-        <img
-          src="https://res.cloudinary.com/dkkrcphjh/image/upload/v1677111771/sublitorre_nq0ewq.png"
-          alt="sublitorre"
-        />
-      </div>
+    <div>
+      <ItemList items={items} />
     </div>
   );
 };
