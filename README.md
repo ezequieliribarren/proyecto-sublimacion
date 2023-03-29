@@ -18,6 +18,11 @@ Se realiza con el objetivo de poder cumplir con los requisitos para ser evaluado
 [Link al video](https://drive.google.com/file/d/1SGcF8ZYR38UNlmzW16BxAPwK-vtbILdk/view?usp=sharing)
 
 
+## A continuación el sitio web desplegado en Vercel:
+
+[Link al sitio](https://react-coder-iribarren-ezequiel.vercel.app/)
+
+
 
 ### Dependencias utilizadas en el proyecto
 
