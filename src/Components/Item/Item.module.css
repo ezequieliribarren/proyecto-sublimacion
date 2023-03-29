@@ -4,6 +4,7 @@
     text-align: center;
     box-shadow: 0 3px 15px #585373 !important;
     height: 36rem;
+    margin: 1.5rem;
 }
 
 .cardActions{
@@ -23,4 +24,8 @@ height: 10rem;
 
 .link{
     text-decoration: none;
+}
+
+.button{
+    text-decoration: none!important;
 }

@@ -1,31 +1,59 @@
-import React from "react";
-import { products } from "../../productsMock";
 import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
+import ItemList from "../ItemList/ItemList";
+import PulseLoader from "react-spinners/PulseLoader";
+
+import { db } from "../../firebaseConfig";
+
+import { collection, getDocs, query, where } from "firebase/firestore";
+
 const ItemListContainer = () => {
+  const { id } = useParams();
+
   const [items, setItems] = useState([]);
 
-const{id} = useParams()
-
-const productFilter = products.filter ((element) => element.category === id)
-
   useEffect(() => {
-    const productList = new Promise((resolve, reject) => {
-      resolve(id? productFilter: products);
-    });
-    productList
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((err) => {
-        console.log(err);
+    const itemsCollection = collection(db, "products");
+
+    let consulta = undefined;
+
+    if (id) {
+      const q = query(itemsCollection, where("category", "==", id));
+      consulta = getDocs(q);
+    } else {
+      consulta = getDocs(itemsCollection);
+    }
+
+    consulta.then((res) => {
+      let products = res.docs.map((product) => {
+        return {
+          ...product.data(),
+          id: product.id,
+        };
       });
+
+      setItems(products);
+    });
   }, [id]);
+
+  if (items.length === 0) {
+    return (
+      <div style={{ display: "flex", justifyContent: "center"}}>
+        <PulseLoader
+          color={"#585373"}
+          size={70}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          margin={100}
+        />
+      </div>
+    );
+  }
+
   return (
     <div>
-      <ItemList items={items} />
+       <ItemList items={items} />
     </div>
   );
 };

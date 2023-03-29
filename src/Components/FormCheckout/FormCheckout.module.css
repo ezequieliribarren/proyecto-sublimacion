@@ -1,0 +1,47 @@
+.title{
+  font-size: 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #585373;
+}
+.contForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contForm h3{
+  font-size: 2rem;
+  color: #585373;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 2rem;
+  
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: rgb(255, 255, 255);
+    width: 70rem;
+    box-shadow: 0 3px 15px #585373 !important;
+    margin-top: 5rem;
+}
+
+.form input{
+  width: 60rem;
+  height: 3rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.button{
+  margin-top: 1rem;
+  width: 10rem;
+  background-color: #683f98;
+  color: white;
+  
+}
+

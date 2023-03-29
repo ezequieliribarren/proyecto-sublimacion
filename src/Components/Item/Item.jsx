@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import x from "./Item.module.css"
 import { Link } from "react-router-dom";
 
+
 const Item = ({ element }) => {
   return (
      <Card className={x.card} >
@@ -24,8 +25,8 @@ const Item = ({ element }) => {
         </Typography>
       </CardContent>
       <CardActions className={x.cardActions}>
-        <Link className={x.link} to={`/item/${element.id}`}>
-        <Button size="small" variant="contained" color="primary">
+        <Link className={x.button} to={`/itemDetail/${element.id}`}>
+        <Button  size="small" variant="contained" color="primary">
           Ver detalle
         </Button>
         </Link>

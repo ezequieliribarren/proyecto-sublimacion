@@ -1,8 +1,11 @@
 .carrito {
   margin: 2rem;
   color: rgb(210, 210, 210);
+  text-decoration: none !important;
+
 }
 
 .carrito:hover {
   color: rgb(4, 4, 4);
 }
+
